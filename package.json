@@ -1,0 +1,37 @@
+{
+  "name": "graphql-apollo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "bin": "build/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js --ext js, --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.js -m -o build",
+    "build:linux": "npm run build && pkg --output 'dist/app.bin' -t node16-linux-x64 .",
+    "build:macos": "npm run build && pkg --output 'dist/app.bin' -t node16-macos-x64 ."
+  },
+  "keywords": [],
+  "author": "rx",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "8.3.13",
+    "apollo-server-core": "3.8.2",
+    "apollo-server-errors": "3.3.1",
+    "apollo-server-express": "3.6.7",
+    "graphql": "15.7.2",
+    "graphql-redis-subscriptions": "2.4.2",
+    "graphql-ws": "5.8.2",
+    "ioredis": "5.0.6",
+    "ws": "8.7.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.33.4",
+    "babel-cli": "6.26.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-stage-0": "6.24.1",
+    "nodemon": "2.0.2",
+    "pkg": "5.4.1"
+  }
+}
