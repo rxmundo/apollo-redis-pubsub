@@ -43,10 +43,7 @@ Launch Apollo Studio...
 
 Click 'Query your server'.
 
-Change Subscription Implementation to `graphql-ws`
-
-Click the gear icon beside sandbox url.
-![Conection button](assets/apollo-studio-conn-settings-0.png)
+Change Subscription Implementation to `graphql-ws`. Click the gear icon beside sandbox url.
 
 ![Connection Settings](assets/apollo-studio-conn-settings-1.png)
 
